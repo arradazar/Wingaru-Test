@@ -1,0 +1,19 @@
+<h2>List of Users</h2>
+    <div>
+        <!-- User List Template -->
+        <table>
+            <tbody> 
+                <tr *ngFor="let user of users.data; index as i"> 
+                    <td>
+                        <img src="{{user.avatar}}">
+                    </td> 
+                    <td>{{user.id}}</td>
+                    <td>{{user.first_name}} {{user.last_name}}</td>
+                    <td>{{user.email}}</td>
+                    <td class="alignr" data-toggle="modal" data-target="#exampleModal">
+                        <a href="javascript:void(0)" (click)="getDetails(i)">Edit</a>
+                    </td>
+                </tr>
+            </tbody> 
+        </table>
+    </div>
